@@ -19,7 +19,7 @@ const Cards = () => {
   return (
     <div className={classes.root}>
       <GridList cols={3}>
-        {[1, 2, 3].map(tile => (
+        {[1, 2, 3, 4, 5].map(tile => (
           <Card key={tile}/>
         ))}
       </GridList>
