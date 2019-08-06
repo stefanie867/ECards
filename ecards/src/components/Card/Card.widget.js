@@ -5,8 +5,6 @@ import CardActions from '@material-ui/core/CardActions';
 import Collapse from '@material-ui/core/Collapse';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import {StyledCard, StyledAvatar, StyledCardMedia, StyledIconButton} from '../../styled/styled.components';
@@ -23,7 +21,7 @@ export default function RecipeReviewCard() {
       <CardHeader
         avatar={
           <StyledAvatar aria-label="recipe">
-            R
+            E
           </StyledAvatar>
         }
         action={
@@ -45,12 +43,6 @@ export default function RecipeReviewCard() {
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
-        </IconButton>
-        <IconButton aria-label="share">
-          <ShareIcon />
-        </IconButton>
         <StyledIconButton
           expanded={expanded}
           onClick={handleExpandClick}
