@@ -1,5 +1,5 @@
 import styled, {css} from 'styled-components';
-import { Card, Avatar, CardMedia, IconButton } from '@material-ui/core';
+import { Card, Avatar, CardMedia, IconButton, GridList } from '@material-ui/core';
 
 export const StyledDiv = styled.div`
     display: flex;
@@ -9,12 +9,19 @@ export const StyledDiv = styled.div`
     background-color: theme.palette.background.paper;
 `;
 
+export const StyledGridList = styled(GridList)`
+    margin: 2px !important;
+`;
+
 export const StyledCard = styled(Card)`
     max-width: 345px;
+    margin: 2px;
 `;
 
 export const StyledAvatar = styled(Avatar)`
-    &.MuiAvatar-root {background-color: #f44336;}
+    &.MuiAvatar-root {
+        background-color: #f44336;
+    }
 `;
 
 export const StyledCardMedia = styled(CardMedia)`
