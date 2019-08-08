@@ -8,10 +8,10 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import {StyledCard, StyledAvatar, StyledCardMedia, StyledIconButton} from '../../styled/styled.components';
 
-export default function RecipeReviewCard(props) {
+export default function Card(props) {
   const [expanded, setExpanded] = useState(false);
 
-  function handleExpandClick() {
+  const handleExpandClick = () => {
     setExpanded(!expanded);
   }
 
@@ -40,7 +40,7 @@ export default function RecipeReviewCard(props) {
       </CardContent>
       <CardActions disableSpacing>
         <StyledIconButton
-          expanded={expanded}
+          expanded={expanded ? 1 : 0}
           onClick={handleExpandClick}
           aria-expanded={expanded}
           aria-label="show more"
