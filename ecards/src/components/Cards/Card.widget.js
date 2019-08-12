@@ -6,7 +6,7 @@ import Collapse from '@material-ui/core/Collapse';
 import IconButton from '@material-ui/core/IconButton';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
-import {StyledCard, StyledAvatar, StyledCardMedia, StyledIconButton} from '../../styled/styled.components';
+import {StyledCard, StyledAvatar, StyledCardMedia, StyledIconButton} from './Cards.style';
 import PropTypes from 'prop-types';
 
 const Card = (props) =>  {

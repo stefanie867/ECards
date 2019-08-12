@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import Card from '../Card/Card.widget';
-import {StyledDiv, StyledGridList} from '../../styled/styled.components';
+import Card from './Card.widget';
+import {StyledDiv, StyledGridList} from './Cards.style';
 import {map} from 'lodash';
 import PropTypes from 'prop-types';
 
