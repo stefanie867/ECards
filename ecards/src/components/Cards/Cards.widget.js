@@ -1,24 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import Card from '../Card/Card.widget';
 import {StyledDiv, StyledGridList} from '../../styled/styled.components';
-import { getContent } from '../../api/contentApi';
 import {map} from 'lodash';
+import PropTypes from 'prop-types';
 
-const Cards = () => {
+const Cards = (props) => {
   const [mounted, setMounted] = useState(false);
-  const [content, setContent] = useState([]);
 
   useEffect(() => {
     if (!mounted) {
       setMounted(true);
-      getContent().then(json => setContent(json));
+      props.getContent();
     }
   }, [mounted]);
 
   return (
     <StyledDiv>
       <StyledGridList>
-        {map(content, c => (
+        {map(props.content, c => (
           <Card 
             key={c.key}
             title={c.title}
@@ -33,5 +32,11 @@ const Cards = () => {
     </StyledDiv>
   );
 }
+
+Cards.propTypes = {
+  isContentLoading: PropTypes.bool.isRequired,
+  content: PropTypes.array.isRequired,
+  getContent: PropTypes.func.isRequired
+};
 
 export default Cards;

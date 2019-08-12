@@ -7,8 +7,9 @@ import IconButton from '@material-ui/core/IconButton';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import {StyledCard, StyledAvatar, StyledCardMedia, StyledIconButton} from '../../styled/styled.components';
+import PropTypes from 'prop-types';
 
-export default function Card(props) {
+const Card = (props) =>  {
   const [expanded, setExpanded] = useState(false);
 
   const handleExpandClick = () => {
@@ -56,3 +57,14 @@ export default function Card(props) {
     </StyledCard>
   );
 }
+
+Card.propTypes = {
+  title: PropTypes.string.isRequired,
+  subheader: PropTypes.string.isRequired,
+  media: PropTypes.string.isRequired,
+  mediaTitle: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
+  detailedContent: PropTypes.string.isRequired,
+};
+
+export default Card;

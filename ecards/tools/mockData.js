@@ -36,7 +36,7 @@ const content = [{
 }, {
   key: 2,
   title: "Shrimp and Chorizo Paella",
-  subheader: "September 14, 2016",
+  subheader: "September 15, 2016",
   media: "/public/images/logo.svg",
   mediaTitle: "Paella dish",
   content: getContent(),
@@ -44,7 +44,7 @@ const content = [{
 }, {
   key: 3,
   title: "Shrimp and Chorizo Paella",
-  subheader: "September 14, 2016",
+  subheader: "September 16, 2016",
   media: "/public/images/logo.svg",
   mediaTitle: "Paella dish",
   content: getContent(),
