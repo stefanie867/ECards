@@ -8,13 +8,31 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import {StyledCard, StyledAvatar, StyledCardMedia, StyledIconButton} from './Cards.style';
 import PropTypes from 'prop-types';
+import {DropzoneArea} from 'material-ui-dropzone';
 
 const Card = (props) =>  {
   const [expanded, setExpanded] = useState(false);
+  const [media, setMedia] = useState(props.media);
+  const [mediaTitle, setMediaTitle] = useState(props.mediaTitle);
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
   }
+
+  const handleDropzoneAreaChange = (files) => {
+    handleImageSelected(files[0]);
+  };
+
+  const handleImageSelected = (file) => {
+    let fileReader = new FileReader();
+
+    fileReader.onload = function(e) {
+        setMediaTitle(file.name);
+        setMedia(e.target.result);
+    }
+
+    fileReader.readAsDataURL(file);
+};
 
   return (
     <StyledCard>
@@ -32,10 +50,16 @@ const Card = (props) =>  {
         title={props.title}
         subheader={props.subheader}
       />
-      <StyledCardMedia
-        image={props.media}
-        title={props.mediaTitle}
-      />
+      {media && <StyledCardMedia
+        image={media}
+        title={mediaTitle}
+      />}
+      {!media && <DropzoneArea 
+        onChange={handleDropzoneAreaChange}
+        acceptedFiles={['image/*']}
+        filesLimit={1}
+        maxFileSize={30000000}
+        />}
       <CardContent>
         {props.content}
       </CardContent>

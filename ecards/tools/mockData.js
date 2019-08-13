@@ -33,22 +33,6 @@ const content = [{
   mediaTitle: "Paella dish",
   content: getContent(),
   detailedContent: getDetailedContent()
-}, {
-  key: 2,
-  title: "Shrimp and Chorizo Paella",
-  subheader: "September 15, 2016",
-  media: "/public/images/logo.svg",
-  mediaTitle: "Paella dish",
-  content: getContent(),
-  detailedContent: getDetailedContent()
-}, {
-  key: 3,
-  title: "Shrimp and Chorizo Paella",
-  subheader: "September 16, 2016",
-  media: "/public/images/logo.svg",
-  mediaTitle: "Paella dish",
-  content: getContent(),
-  detailedContent: getDetailedContent()
 }];
 
 // Using CommonJS style export so we can consume via Node (without using Babel-node)

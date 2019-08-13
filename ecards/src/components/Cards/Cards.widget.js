@@ -28,6 +28,15 @@ const Cards = (props) => {
             detailedContent={c.detailedContent}
           />
         ))}
+        <Card 
+            key={2}
+            title={undefined}
+            subheader={undefined}
+            media={undefined}
+            mediaTitle={undefined}
+            content={undefined}
+            detailedContent={undefined}
+          />
       </StyledGridList>
     </StyledDiv>
   );

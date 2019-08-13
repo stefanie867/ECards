@@ -25,7 +25,7 @@ export const StyledAvatar = styled(Avatar)`
 `;
 
 export const StyledCardMedia = styled(CardMedia)`
-    height: 0;
+    height: 56px;
     padding-top: 56.25%;
 `;
 
