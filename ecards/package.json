@@ -10,7 +10,7 @@
     "eslint-loader": "^2.2.1",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-react": "^7.14.3",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "material-ui-dropzone": "^2.4.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
